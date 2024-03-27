@@ -1,0 +1,78 @@
+<!--====================  Blog Area Start ====================-->
+<div class="blog-pages-wrapper section-space--pt_70">
+  <div class="container">
+    <div class="py-4 mb-4">
+      <div class="align-items-center">
+        <div class="text-center">
+          <h3 class="chuyenmuc" style="color: #50B848;">TUYỂN DỤNG - TIN TỨC</h3>
+          <hr class="hrtag">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-3 wow move-up">
+        <div class="wdc-blog">
+          <div class="faq-wrapper">
+            <div class="card">
+              <ngx-slick-carousel class="carousel" [config]="slideConfig">
+                <div ngxSlickItem class="slide" *ngFor="let rec of recruit">
+                  <div class="post-feature blog-thumbnail">
+                    <a routerLink="/tuyen-dung/{{rec.url}}">
+                      <img src="{{rec.thumb.pathUrl}}" class="mr-3 blog-thumbnail img-fluid" alt="">                                </a>
+                  </div>
+                  <div class="blog-inner">
+                    <h4 class="post-title">
+                      <a routerLink="/tuyen-dung/{{rec.url}}">{{rec.title}}</a>
+                    </h4>
+                    <div class="post-excerpt">
+                      <p>{{rec.description}}</p>
+                    </div>
+                  </div>
+                </div>
+              </ngx-slick-carousel>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 wow move-up">
+          <div class="service-link">
+            <a class="wpb_color-gree" routerLink="/tuyen-dung" routerLinkActive="active">TÌM HIỂU THÊM</a>
+          </div>
+        </div>
+      </div>
+
+      <!--======= Single Blog Item Start ========-->
+      <div class="col-lg-6 col-md-12 mb-3 wow move-up">
+        <div class="d-flex flex-column">
+          <ng-container *ngFor="let new of news; let i = index">
+            <div class="faq-wrapper mb-3" *ngIf="i < 3">
+              <div class="card">
+                <div class="content-box">
+                  <div class="single-product-wrap">
+                    <div class="image-list product-thumbnail">
+                      <a routerLink="/tin-tuc/{{new.url}}" class="product-thumb-image">
+                        <img class="img-fluid" src="{{new.postImage.pathUrl}}" alt="" appHideMissing>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <a routerLink="/tin-tuc/{{new.url}}">{{new.title}}</a>
+                    <div class="text-content">{{new.description}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+          <div class="col-md-12 wow move-up">
+            <div class="service-link">
+              <a routerLink="/tin-tuc/">TÌM HIỂU THÊM</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--===== Single Blog Item End =========-->
+
+    </div>
+  </div>
+</div>
+<!--====================  Blog Area End  ====================-->

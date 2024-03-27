@@ -1,0 +1,15 @@
+.wdc-input input{
+  background: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #50B848;
+  padding: 0 10px;
+  height: 45px;
+}
+.close{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 20px;
+  color: #f00;
+}

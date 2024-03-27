@@ -1,0 +1,64 @@
+<div class="container section-space--pb_90">
+  <div class="main-shop-wrap">
+    <div class="py-4">
+      <div class="align-items-center">
+        <div class="text-center">
+          <h3 class="chuyenmuc" style="color: #50b848">GIỚI THIỆU</h3>
+          <hr class="hrtag" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <div
+      class="single-portfolio-list-item border-bottom wow move-up animate"
+      style="visibility: visible; opacity: 0"
+    >
+      <div class="faq-wrapper">
+        <div class="card">
+          <div
+            class="row flex-column-reverse flex-xl-row flex-lg-row flex-md-row"
+            style="padding: 40px"
+          >
+            <div class="col-lg-6 col-md-6">
+              <!-- Post info Start -->
+              <div class="post-info list-item-space">
+                <div class="text-justify" [innerHTML]="desc"></div>
+
+                <div class="post-read-more mt-30">
+                  <div class="service-link pb-0">
+                    <a href="/ve-chung-toi">TÌM HIỂU THÊM</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Post info End -->
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <!-- Post Feature Start -->
+              <div class="post-feature blog-thumbnail">
+                <figure
+                  class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-has-aspect-ratio"
+                >
+                  <div class="wp-block-embed__wrapper" [innerHTML]="link"></div>
+                </figure>
+                <!-- <iframe
+                  width="460"
+                  height="315"
+                  src="https://www.youtube.com/embed/cG-zYVv4fVw?si=jueZeJjdMtAInFta"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe> -->
+              </div>
+              <!-- Post Feature End -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

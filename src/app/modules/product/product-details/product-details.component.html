@@ -1,0 +1,73 @@
+<app-nav-list></app-nav-list>
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-box section-space--pt_100">
+  <img src="assets/images/banners/banner-tin-tức.png" class="img-fluid">
+</div>
+<!-- breadcrumb-area end -->
+
+<!--====================  Blog Area Start ====================-->
+<div class="blog-pages-wrapper section-space--ptb_90">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="main-blog-wrap">
+          <!--======= Single Blog Item Start ========-->
+          <div class="single-blog-item">
+
+            <!-- Post info Start -->
+            <div class="post-info lg-blog-post-info  wow move-up">
+
+              <h4 class="post-title font-weight--bold m-0">{{product.name}}</h4>
+
+<!--              <div class="post-meta mt-20">-->
+<!--                <div class="post-date">-->
+<!--                  <i class="far fa-calendar meta-icon"></i>-->
+<!--                  {{news.date}}-->
+<!--                </div>-->
+<!--              </div>-->
+
+              <div class="post-excerpt mt-15">
+                <div class="content" [innerHTML]="content"></div>
+              </div>
+            </div>
+            <!-- Post info End -->
+          </div>
+          <!--===== Single Blog Item End =========-->
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="page-sidebar-content-wrapper page-sidebar-right  small-mt__40 tablet-mt__40">
+          <div class="page-sidebar-content-wrapper page-sidebar-right  small-mt__40 tablet-mt__40">
+
+            <!-- === Sidebar Widget Start ===-->
+            <div class="sidebar-widget widget-categories  wow move-up">
+              <ul>
+                <li class="cat-item"><a routerLink="/ve-chung-toi" routerLinkActive="ative">Về Chúng Tôi</a>
+                </li>
+                <li class="cat-item"><a href="#">Hồ Sơ Năng Lực</a>
+                </li>
+                <li class="cat-item"><a href="#">Khách Hàng Tiêu Biểu</a>
+                </li>
+              </ul>
+
+            </div>
+            <!-- === Sidebar Widget End === -->
+
+            <div id="media_image-3" class=" my-4 widget_media_image">
+              <a href="/tuyen-dung">
+                <img width="540" height="360" src="https://ecoit.asia/wp-content/uploads/2019/08/tuyendung.jpg" class="image wp-image-1380  attachment-full size-full" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://ecoit.asia/wp-content/uploads/2019/08/tuyendung.jpg 540w, https://ecoit.asia/wp-content/uploads/2019/08/tuyendung-525x350.jpg 525w" sizes="(max-width: 540px) 100vw, 540px">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--====================  Blog Area End  ====================-->
+
+<!--====================  footer area ====================-->
+<app-footer></app-footer>
+<!--====================  End of footer area  ====================-->

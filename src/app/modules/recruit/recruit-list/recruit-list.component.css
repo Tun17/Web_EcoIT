@@ -1,0 +1,36 @@
+.hrtag{
+  background: #50B848;
+  border: 0;
+  outline: 0;
+  height: 1px;
+  width: 150px;
+}
+.breadcrumb-box{
+  width: 100%;
+}
+.breadcrumb-box img{
+  width: 100%;
+  object-fit: cover;
+}
+
+/*-- left ------------------------------------------*/
+.single-blog-content{
+  display: flex;
+  gap: 15px;
+}
+.ava-box img{
+  width: 220px;
+  height: 130px;
+  object-fit: fill;
+}
+/*-- right------------------------------------------*/
+.box-search-tuyen-dung {
+  border: 1px solid #50b848;
+  padding: 40px 15px 40px 15px;
+  margin-top: 15px;
+}
+
+.box-search-tuyen-dung .btn-tuyendung {
+  width: 100%;
+  background-color: #50b848;
+}

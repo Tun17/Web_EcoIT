@@ -1,0 +1,18 @@
+.content{
+  font-size: 16px;
+}
+
+.breadcrumb-box{
+  width: 100%;
+}
+.breadcrumb-box img{
+  width: 100%;
+  object-fit: cover;
+}
+.hrtag{
+  background: #50B848;
+  border: 0;
+  outline: 0;
+  height: 1px;
+  width: 150px;
+}

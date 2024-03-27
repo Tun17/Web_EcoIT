@@ -1,0 +1,53 @@
+.breadcrumb-box{
+  width: 100%;
+}
+.breadcrumb-box img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.chuyenmuc{
+  text-transform: uppercase;
+  color: #50B848;
+}
+.hrtag{
+  background: #50B848;
+  border: 0;
+  outline: 0;
+  height: 2px;
+  width: 200px;
+}
+
+/*-------------- product list ------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+  .col-2dot4{
+    flex: calc(100% / 5);
+    max-width: calc(100% / 5);
+  }
+}
+
+.ht-service-box--two .image{
+  height: 105px;
+  width: 135px;
+  margin: 0 auto 20px;
+}
+.ht-service-box--two .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.service_text{
+  font-size: 13px;
+  max-height: 50px;
+  height: 50px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+.service-link a{
+  color: #fff;
+  border-radius: 5px;
+  background: #50b848;
+}

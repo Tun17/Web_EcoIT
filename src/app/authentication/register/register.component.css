@@ -1,0 +1,126 @@
+.modal-custom, .modal-custom-1{
+  z-index: 500;
+  position: fixed; /* Stay in place */
+  right: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: #fff;
+  color: #333;
+}
+.modal-custom{
+  z-index: 1000; /* Sit on top */
+  animation-name: rightToLeft;
+  overflow: auto;
+  animation-duration: 0.8s;
+}
+
+@keyframes rightToLeft {
+  from {right: -50%;}
+  to {right: 0;}
+}
+
+.error-mess{
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f00;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #384875, #4d6199, #405082, #222a44);
+}
+
+
+.save-pass{
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+}
+/* The container */
+.save-pass-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.save-pass-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 10px;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.radio-mark{
+  position: absolute;
+  top: 3px;
+  left: 10px;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.save-pass-container:hover input ~ .checkmark,
+.save-pass-container:hover input ~ .radio-mark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.save-pass-container input:checked ~ .checkmark,
+.save-pass-container input:checked ~ .radio-mark {
+  background-color: #5945e6;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.save-pass-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.save-pass-container .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

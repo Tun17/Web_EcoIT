@@ -1,0 +1,150 @@
+<!--====================  footer area ====================-->
+<div class="footer-area-wrapper" style="color: #bababa">
+  <div
+    class="footer-area section-space--ptb_70 border-top bg-dark"
+    style="font-size: 14px"
+  >
+    <div class="container">
+      <div class="row footer-widget-wrapper">
+        <div class="col-lg-3 col-md-6 footer-widget">
+          <div class="footer-widget__logo mb-30">
+            <img
+              src="/assets/images/avatars/logoEcoit.jpg"
+              class="img-fluid"
+              alt=""
+              style="width: 145px"
+            />
+          </div>
+          <div class="text-justify">
+            EcoIT đang từng bước thiết lập mối quan hệ đối tác, kết nối sản phẩm
+            với các hãng công nghệ hàng đầu trên thế giới nhằm cung cấp một hệ
+            sinh thái sản phẩm hoàn thiện đến cho khách hàng và cộng đồng người
+            sử dụng.
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-widget">
+          <h6 class="footer-widget__title mb-20">
+            CÁC LĨNH VỰC HOẠT ĐỘNG CHÍNH
+          </h6>
+          <ul class="footer-widget__list">
+            <li>
+              <i class="far fa-angle-right mr-2"></i>
+              <a href="#" class="hover-style-link">Số hóa và chuyển đổi số</a>
+            </li>
+            <li>
+              <i class="far fa-angle-right mr-2"></i>
+              <a href="#" class="hover-style-link"
+                >Tích hợp hệ thống công nghệ thông tin</a
+              >
+            </li>
+            <li>
+              <i class="far fa-angle-right mr-2"></i>
+              <a href="#" class="hover-style-link"
+                >Cung ứng dịch vụ công nghệ thông tin</a
+              >
+            </li>
+            <li>
+              <i class="far fa-angle-right mr-2"></i>
+              <a href="#" class="hover-style-link"
+                >Tư vấn dự án công nghệ thông tin</a
+              >
+            </li>
+            <li>
+              <i class="far fa-angle-right mr-2"></i>
+              <a href="#" class="hover-style-link"
+                >Sản xuất và gia công phần mềm</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-widget">
+          <h6 class="footer-widget__title mb-20">TIN MỚI NHẤT</h6>
+          <ul class="footer-widget__list">
+            <ng-container *ngFor="let new of post; let i = index">
+              <li class="faq-wrapper mb-3" *ngIf="i < 3">
+                <div class="content-box">
+                  <div class="single-product-wrap">
+                    <div class="image-list product-thumbnail">
+                      <a
+                        routerLink="/tin-tuc/{{ new.url }}"
+                        class="product-thumb-image"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="{{ new.postImage.pathUrl }}"
+                          alt=""
+                          appHideMissing
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <a routerLink="/tin-tuc/{{ new.url }}">{{ new.title }}</a>
+                  </div>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-widget">
+          <h6 class="footer-widget__title mb-20">LIÊN HỆ CHÚNG TÔI</h6>
+          <ul class="footer-widget__list">
+            <li *ngFor="let addr of fullAddress">
+              <i class="fa fa-map-marker mr-2"></i>
+              <span>{{ addr.name }}</span>
+            </li>
+            <li>
+              <i class="far fa-phone mr-2"></i>
+              <a href="tel:{{ about.phone }}" class="hover-style-link">{{
+                about.phone
+              }}</a>
+            </li>
+            <li>
+              <i class="far fa-print mr-2"></i>
+              <a href="tel:{{ about.fax }}" class="hover-style-link">{{
+                about.fax
+              }}</a>
+            </li>
+            <li>
+              <i class="far fa-envelope mr-2"></i>
+              <a href="mailto:{{ about.email }}" class="hover-style-link">{{
+                about.email
+              }}</a>
+            </li>
+          </ul>
+          <div class="mt-3">
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecoitcorp%2F&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+              width="340"
+              height="130"
+              style="border: none; overflow: hidden"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="footer-copyright-area border-top section-space--ptb_30"
+    style="background-color: #212121"
+  >
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="text-center text-md-left">
+          <span class="copyright-text"
+            >© Bản quyền 2019 | Công ty cổ phần ECOIT</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--====================  End of footer area  ====================-->

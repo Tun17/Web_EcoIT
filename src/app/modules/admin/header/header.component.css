@@ -1,0 +1,62 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 120px;
+  z-index: 100;
+  background-color: #fff;
+  height: 65px;
+  box-shadow: inset 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+}
+
+.menu-item{
+  display: flex;
+  align-items: center;
+  padding: 0.15rem 0;
+  margin-right: 0.5rem;
+}
+.menu-item .menu-link{
+  padding: 0.375rem 1rem;
+}
+.menu-item.here .menu-link {
+  transition: color 0.2s ease;
+  background-color: #F4F6FA;
+  color: #009ef7;
+  border-radius: 0.475rem;
+}
+
+.icon-head{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+}
+.icon-head:hover{
+  background: #f1faff;
+  color: #009cf7;
+}
+.icon-head:hover a{
+  color: #009cf7;
+}
+.ht-btn-custom{
+  outline: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: inherit;
+}
+
+.user-ava-box{
+  width: 40px;
+  height: 40px;
+  border-radius: 0.475rem;
+  cursor: pointer;
+}
+.user-ava-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0.475rem;
+}

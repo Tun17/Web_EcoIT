@@ -1,0 +1,44 @@
+<div class="container section-space--pt_90">
+  <div class="py-4">
+    <div class="align-items-center">
+      <div class="text-center">
+        <h3 class="chuyenmuc" style="color: #50B848;">HÌNH ẢNH HOẠT ĐỘNG</h3>
+        <hr class="hrtag">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="my-4">
+        <div id="sliderHinhAnhHoatDong" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{{firstImage.url}}" class="wp-post-image" alt="Hinh Anh Hoat Dong">
+              <div class="carousel-caption">
+                <div></div>
+              </div>
+            </div>
+
+            <ng-container *ngFor="let gallery of galleries; let i = index">
+              <div class="carousel-item" *ngIf="i > 0">
+                <img src="{{gallery.image.pathUrl}}" class="wp-post-image" alt="Hinh Anh Hoat Dong">
+                <div class="carousel-caption">
+                  <div></div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+
+          <a class="carousel-control-prev" href="#sliderHinhAnhHoatDong" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#sliderHinhAnhHoatDong" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

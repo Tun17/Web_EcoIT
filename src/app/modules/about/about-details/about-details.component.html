@@ -1,0 +1,77 @@
+<app-nav-list></app-nav-list>
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-box">
+  <img src="assets/images/banners/banner-gioi-thiệu-v2-.jpg" class="img-fluid">
+</div>
+<!-- breadcrumb-area end -->
+
+<!--====================  Blog Area Start ====================-->
+<div class="blog-pages-wrapper section-space--ptb_30">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="main-blog-wrap">
+          <!--======= Single Blog Item Start ========-->
+          <div class="pb-4 mb-4">
+            <div class="align-items-center">
+              <div class="text-center">
+                <h4 class="chuyenmuc" style="color: #50B848;">VỀ CHÚNG TÔI</h4>
+                <hr class="hrtag">
+              </div>
+            </div>
+          </div>
+          <div class="single-blog-item">
+            <!-- Post info Start -->
+            <div class="post-info lg-blog-post-info  wow move-up">
+
+              <div class="post-excerpt mt-15">
+                <div class="content" [innerHTML]="content"></div>
+              </div>
+            </div>
+            <!-- Post info End -->
+          </div>
+          <!--===== Single Blog Item End =========-->
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="page-sidebar-content-wrapper page-sidebar-right  small-mt__40 tablet-mt__40">
+
+          <!-- === Sidebar Widget Start ===-->
+          <div class="sidebar-widget widget-categories wow move-up">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper">
+                <div class="wdc-heading style-1 text-left">
+                  <ul class="box-info-company">
+                    <li class="text-bold">
+                      <a routerLink="/ve-chung-toi" routerLinkActive="ative">Về Chúng Tôi</a>
+                    </li>
+                    <li class="text-bold">
+                      <a href="https://ecoit.asia/ho-so-nang-luc/">Hồ Sơ Năng Lực</a>
+                    </li>
+                    <li class="text-bold">
+                      <a href="/khach-hang-tieu-bieu">Khách Hàng Tiêu Biểu</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- === Sidebar Widget End === -->
+
+          <div id="media_image-3" class=" my-4 widget_media_image">
+            <a href="/tuyen-dung">
+              <img width="540" height="360" src="https://ecoit.asia/wp-content/uploads/2019/08/tuyendung.jpg" class="image wp-image-1380  attachment-full size-full" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://ecoit.asia/wp-content/uploads/2019/08/tuyendung.jpg 540w, https://ecoit.asia/wp-content/uploads/2019/08/tuyendung-525x350.jpg 525w" sizes="(max-width: 540px) 100vw, 540px">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--====================  Blog Area End  ====================-->
+
+<!--====================  footer area ====================-->
+<app-footer></app-footer>
+<!--====================  End of footer area  ====================-->

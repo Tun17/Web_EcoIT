@@ -1,0 +1,98 @@
+<div class="site-wrapper-reveal">
+  <!--====================  Blog Area Start ====================-->
+  <div class="blog-pages-wrapper section-space--ptb_60">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 ml-auto mr-auto">
+          <div class="main-blog-wrap">
+            <!--======= Single Blog Item Start ========-->
+            <div class="single-blog-item  wow move-up">
+              <div class="post-excerpt">
+                <div class="contact-from-wrapper">
+
+                  <form>
+                    <div class="contact-page-form">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="contact-inner">
+                            <span><strong>HOTLINE</strong></span>
+                            <input name="phone" type="text" [(ngModel)]="about.phone">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="contact-inner">
+                            <span><strong>EMAIL</strong></span>
+                            <input name="email" type="email" [(ngModel)]="about.email">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="contact-inner">
+                            <span><strong>FAX</strong></span>
+                            <input name="fax" type="text" [(ngModel)]="about.fax">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="contact-inner">
+                            <span><strong>Link</strong></span>
+                            <input name="videoLINK" type="text" [(ngModel)]="about.videoLINK">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <span><strong>ĐỊA CHỈ</strong></span>
+                          <div class="contact-inner" *ngFor="let list of fullAddress">
+                            <div class="address">
+                              <input type="text" value="{{list}}">
+                            </div>
+                          </div>
+
+                          <!-- Draft address -->
+                          <ng-container *ngIf="address.length > 0">
+                            <div class="contact-inner" *ngFor="let ad of draftAddr">
+                              <div class="address">
+                                <input type="text" [value]="ad">
+                                <a style="color: #f00" class="ht-btn-custom p-action-btn hint--rounded hint--bounce hint--right" aria-label="Nháp">
+                                  <i class="far fa-file-exclamation fa-lg"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </ng-container>
+
+                          <div id="address">
+                            <button class="btn" (click)="openModal()">
+                              <i class="fa fa-plus"></i>
+                              <span class="ml-2">Thêm địa chỉ mới</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-md-12 section-space--ptb_30">
+                          <div class="contact-inner">
+                            <span><strong>MÔ TẢ</strong></span>
+                            <ckeditor [(ngModel)]="about.description" [ngModelOptions]="{standalone: true}" [config]="ckeConfig" [data]="about.description"></ckeditor>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="contact-inner contact-message">
+                            <span><strong>VÀI NÉT VỀ CHÚNG TÔI</strong></span>
+                            <ckeditor [(ngModel)]="about.content" [ngModelOptions]="{standalone: true}" [config]="ckeConfig" [data]="about.content"></ckeditor>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <button class="ht-btn ht-btn-md mr-2" (click)="onSubmit()" type="button">Lưu</button>
+                        <div class="text-success ml-3" *ngIf="updateSuccess">{{errorMessage}}</div>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+            <!--===== Single Blog Item End =========-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--====================  Blog Area End  ====================-->
+</div>

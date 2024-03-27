@@ -1,0 +1,139 @@
+/*============================
+    CSS Index
+==============================
+
+    01. Default Css
+        - Breadvrumb
+        - preloader
+        - Newsletter popup
+        - Scroll top
+        - Revulion Area
+    02. Section Spacing Css
+    03. Custom Animation Css
+    04. container Css
+    05. Header Css
+        - Navigation Menu Css
+        - Multilevel Submenu Css
+        - Mega Menu Css
+        - Mminicart Wrapper Css
+        - Mobile Menu Overlay Css
+        - offset Sidebar
+        - search overlay
+    06. Footer Css
+    07. Sidebar Css
+    08. Button Css
+    09. Accordions Css
+    10. Box Icon Css
+    11. Call To Action Css
+    12. Attribute Css
+    13. Contact Form And Newsletter Css
+    14. Countdown Css
+    15. Counters Css
+    16. Listing Css
+    17. Gradation Process Css
+    18. Instagram Css
+    19. Message Box Css
+    20. Video Popup Css
+    21. Pricing table Css
+    22. Pricing Plans Css
+    23. progress Bar Css
+    24. Circle Progress Css
+    25. Restaurant Menu Css
+    26. Row Separators Css
+    27. Social Networks Css
+    28. Tabs Css
+    29. Team Member Css
+    30. Testimonial slider Css
+    31. Timeline Css
+    32. Gallery Css
+    33. Box image Css
+    34. Feature list Css
+    35. Feature slider Css
+    36. Brand logo slider Css
+    37. Branding Page Css
+    38. App Showcase Css
+    39. Software Pages Css
+    40. App Landing Pages Css
+    41. Digital Agency Pages Css
+    42. Ebook Css
+    43. Clinic Pages Css
+    44. Digital Store Pages Css
+    45. Product Showcase Pages Css
+    46. Revolution Slider Css
+    47. Blog Pages Css
+    48. Portfolio Pages Css
+    49. Portfolio Details Pages Css
+    50. Shop Pages Css
+    51. Shop Cart Css
+    52. Shop Checkout Css
+    53. Preview Page Css
+
+
+
+
+
+/*=====  End of CSS Index  ======*/
+
+
+@import '_variabls';
+@import 'global/default';
+@import 'global/spacing';
+@import 'global/animations';
+@import 'global/preview-demo-sidebar';
+@import 'layout/container';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'elements/button';
+@import 'elements/accordions';
+@import 'elements/box-icon';
+@import 'elements/call-to-action';
+@import 'elements/attribute';
+@import 'elements/contact-mailchimp';
+@import 'elements/countdown';
+@import 'elements/counters';
+@import 'elements/lists';
+@import 'elements/gradation';
+@import 'elements/instagram';
+@import 'elements/message-box';
+@import 'elements/popup-video';
+@import 'elements/pricing-box';
+@import 'elements/pricing-table';
+@import 'elements/progress-bar';
+@import 'elements/progress-circle';
+@import 'elements/restaurant-menu';
+@import 'elements/rows-columns';
+@import 'elements/social-networks';
+@import 'elements/tabs';
+@import 'elements/team-member';
+@import 'elements/testimonials';
+@import 'elements/timeline';
+@import 'elements/typed-text';
+@import 'elements/gallery';
+@import 'elements/carousel-sliders';
+@import 'elements/flexible-image-slider';
+@import 'page-section/image-box';
+@import 'page-section/feature-list';
+@import 'page-section/feature-slider';
+@import 'page-section/brand-logo';
+@import 'page-section/branding-page';
+@import 'page-section/background-banner';
+@import 'page-section/app-showcase';
+@import 'page-section/software';
+@import 'page-section/start-up';
+@import 'page-section/payment';
+@import 'page-section/app-landing';
+@import 'page-section/digital-agency';
+@import 'page-section/ebook';
+@import 'page-section/clinic';
+@import 'page-section/digital-store';
+@import 'page-section/product-showcase';
+@import 'page-section/revolution';
+@import 'page-section/blogs-pages';
+@import 'page-section/portfolio-pages';
+@import 'page-section/portfolio-details-pages';
+@import 'page-section/shop';
+@import 'page-section/shop-cart';
+@import 'page-section/shop-checkout';
+@import 'page-section/preview-home';
+

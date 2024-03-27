@@ -1,0 +1,51 @@
+.update_news_item{
+  position: relative;
+}
+.update_news_title{
+  position: absolute;
+  bottom: 15px;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-right: 17px;
+}
+.update_box{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.update_box span{
+  color: #50B848;
+}
+.update_box input{
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #50B848;
+}
+.update_box .content{
+  padding: 10px;
+  border: 2px solid #50B848;
+  min-height: 290px;
+}
+.update_box .image{
+  position: relative;
+  height: 210px;
+  width: 100%;
+}
+.update_box .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.update_box img{
+  width: 100%;
+  object-fit: cover;
+}
+.update_box #ql-editor{
+  min-height: 200px;
+  border: 2px solid #50B848;
+}
+
+.blog-thumbnail{
+  max-height: 250px;
+}

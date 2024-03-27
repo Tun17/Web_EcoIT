@@ -1,0 +1,64 @@
+/*=============================================
+=            52. Shop Checkout Css               =
+=============================================*/
+
+.coupon-message-box {
+    background: #5bc0de;
+    position: relative;
+    width: 100%;
+    border: 0;
+    color: #fff;
+    margin-bottom: 30px !important;
+    padding: 1em 2em 1em 2em;
+    list-style: none outside;
+    word-wrap: break-word;
+    border-radius: 5px;
+    & .coupon {
+        cursor: pointer;
+        font-weight: 600;
+    }
+}
+.checkout-coupon input {
+    border-color: transparent;
+    background: #F8F8F8;
+    min-width: 275px;
+    border-radius: 5px;
+    padding: 3px 20px;
+    height: 56px;
+    margin-right: 15px;
+    border: 1px solid transparent;
+    margin-bottom: 20px;
+}
+.coupon-content , .ship-box-info{
+    display: none;
+}
+
+.shoping-checkboxt-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: $theme-color--heading;
+    margin-bottom: 25px;
+    
+}
+.checkout-box-wrap {
+    & .check-box {
+        margin-right: 15px;
+    }
+}
+.single-form-row {
+    & input , .checkout-mess {
+        border-color: transparent;
+        background: #F8F8F8;
+        width: 100%;
+        border-radius: 5px;
+        padding: 3px 20px;
+        height: 56px;
+        margin-right: 15px;
+        border: 1px solid transparent;
+        margin-bottom: 20px;
+    }
+    & .checkout-mess {
+        height: 140px;
+        padding: 15px;
+    }
+}

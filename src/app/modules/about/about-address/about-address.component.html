@@ -1,0 +1,67 @@
+<!-- begin::Create-->
+<div class="custom-modal" >
+  <form (ngSubmit)="save()" ngNativeValidate>
+    <div class="error-mess mb-4" *ngIf="submitFail">{{errorMessage}}</div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <div class="modal-content-box">
+              <div class="mt-3">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="contact-inner">
+                      <select name="province" (change)="getDistricts($event)" [(ngModel)]="address.province">
+                        <option [value]="null" [selected]="true">Tỉnh / Thành phố</option>
+                        <option *ngFor="let p of provinces" [value]="p.code">{{p.name}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="contact-inner">
+                      <select name="district" (change)="getWards($event)" [(ngModel)]="address.district">
+                        <option [value]="null" [selected]="true">Quận / Huyện / Thị xã</option>
+                        <option *ngFor="let d of districts" [value]="d.code">{{d.name}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="contact-inner">
+                      <select name="wards" [(ngModel)]="address.wards">
+                        <option [value]="null" [selected]="true">Xã / Phường / Thị trấn</option>
+                        <option *ngFor="let w of wards">{{w.name}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="contact-inner">
+                      <span><strong>Khu vực</strong></span>
+                      <input name="prefix" type="text" [(ngModel)]="address.prefix">
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="contact-inner">
+                      <span><strong>Địa chỉ</strong></span>
+                      <input name="address" type="text" [(ngModel)]="address.address" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="btn-box ml-3">
+                <button type="submit" class="ht-btn ht-btn-md mr-2">
+                  <i class="fa fa-save"></i>
+                  <span class="ml-2">Lưu</span>
+                </button>
+                <button class="ht-btn ht-btn-md ml-2" style="background: #ccc" type="button" (click)="closeModal()">Hủy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </form>
+</div>
+<!-- end::Create-->

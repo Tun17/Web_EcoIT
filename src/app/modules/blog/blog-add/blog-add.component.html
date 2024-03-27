@@ -1,0 +1,37 @@
+<form (ngSubmit)="onSubmit()" enctype="multipart/form-data" ngNativeValidate>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="update_box">
+          <span><strong>Ảnh bìa</strong></span>
+          <div class="image">
+            <img src="{{url}}" alt="" appHideMissing>
+          </div>
+          <input type="file" value="select" (change)="imageChange($event)">
+        </div>
+
+        <div class="update_box">
+          <span><strong>Mô tả</strong></span>
+          <input type="text" [(ngModel)]="blog.description" name="description">
+        </div>
+
+        <div style="color: #f00; margin: 10px 0" *ngIf="submitFail">{{errMessage}}</div>
+        <button type="submit" class="btn bg-success">Lưu</button>
+        <a routerLink="/admin/blog" routerLinkActive="active" class="btn mx-3" style="background: #d6d8d9">Hủy</a>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="update_box">
+          <span><strong>Tiêu đề</strong></span>
+          <input type="text" name="title" [(ngModel)]="blog.title" required>
+        </div>
+
+        <div class="update_box" id="sample">
+          <span><strong>Nội dung</strong></span>
+          <ckeditor name="content" [(ngModel)]="blog.content" [config]="ckeConfig" [data]="blog.content"></ckeditor>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>

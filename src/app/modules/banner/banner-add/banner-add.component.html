@@ -1,0 +1,63 @@
+<form (ngSubmit)="onSubmit()" ngNativeValidate>
+  <div class="Popup" id="myEdit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="text-center">
+            <img
+              src="assets/images/avatars/logoEcoit.jpg"
+              style="width: 125px"
+              alt="logo"
+            />
+          </div>
+          <span class="close-btn" (click)="closeModal()">&times;</span>
+        </div>
+
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="main-content">
+              <div class="contact-inner">
+                <div class="close" *ngIf="url">
+                  <span (click)="notNeedFile()"
+                    ><i class="fas fa-folder-minus"></i
+                  ></span>
+                </div>
+                <img src="{{ url }}" alt="" appHideMissing />
+                <input
+                  type="file"
+                  value=""
+                  (change)="inputFile($event)"
+                  id="file-in"
+                  required
+                />
+              </div>
+
+              <div class="contact-inner">
+                <input
+                  type="text"
+                  name="target"
+                  [(ngModel)]="banner.target"
+                  placeholder="*Target"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="comment-submit-btn">
+            <button class="ht-btn ht-btn-md mr-2" type="submit">Lưu</button>
+            <button
+              class="ht-btn ht-btn-md ml-2"
+              style="background: #ccc"
+              type="button"
+              (click)="closeModal()"
+            >
+              Hủy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

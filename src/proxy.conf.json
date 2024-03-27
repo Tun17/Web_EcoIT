@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://provinces.open-api.vn/api/p/",
+    "secure": false
+  }
+}

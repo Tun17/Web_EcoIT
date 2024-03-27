@@ -1,0 +1,30 @@
+.footer-widget__title{
+  color: #fff;
+}
+.faq-wrapper .content-box {
+  display: flex;
+  height: auto;
+  gap: 8px;
+}
+.faq-wrapper .content-box .product-thumb-image{
+  width: 70px;
+  height: 50px;
+}
+.faq-wrapper .content-box img{
+  padding: 3px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #fff;
+  border-radius: 3px;
+}
+.faq-wrapper .content-box .content a{
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
+.faq-wrapper .content-box .content a:hover{
+  color: #50b848;
+}

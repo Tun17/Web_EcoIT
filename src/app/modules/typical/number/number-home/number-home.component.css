@@ -1,0 +1,20 @@
+.flipInX {
+  color: #ffffff;
+  margin-bottom: 0px !important;
+  padding-top: 30px !important;
+  background: #50b848 url("src/assets/images/bg/bg_tieubieu.png");
+}
+
+.hrtag{
+  background: #fff;
+  border: 0;
+  outline: 0;
+  height: 1px;
+  width: 150px;
+}
+
+.chuyenmuc {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}

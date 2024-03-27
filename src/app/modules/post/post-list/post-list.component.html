@@ -1,0 +1,107 @@
+<app-nav-list></app-nav-list>
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-box">
+  <img src="assets/images/banners/banner-tin-tức.png" class="img-fluid">
+</div>
+<!-- breadcrumb-area end -->
+
+<!--========== News List ==========-->
+<div class="site-wrapper-reveal">
+  <!--====================  Blog Area Start ====================-->
+  <div class="blog-pages-wrapper section-space--ptb_60">
+    <div class="container">
+      <div class="py-4 mb-4">
+        <div class="align-items-center">
+          <div class="text-center">
+            <h3 class="chuyenmuc" style="color: #50B848;">TIN TỨC MỚI NHẤT</h3>
+            <hr class="hrtag">
+          </div>
+        </div>
+      </div>
+
+      <div class="single-blog-item blog-grid section-space--mb_60">
+        <div class="row wdc-blog">
+          <div class="col-md-6">
+            <div id="sliderNoiBat" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div *ngIf="firstItem.image" class="carousel-item active" id="first">
+                  <img src="{{firstItem.image}}" alt="">
+                </div>
+
+                <ng-container *ngFor="let new of news; let i = index">
+                  <div *ngIf="i > 0 && i < 3" class="carousel-item" id="{{new.id}}">
+                    <img src="{{new.postImage.pathUrl}}" alt="">
+                  </div>
+                </ng-container>
+              </div>
+
+              <a class="carousel-control-prev" href="#sliderNoiBat" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#sliderNoiBat" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div id="capfirst" style="display:block;">
+              <div class="carousel-cation">
+                <h5><a routerLink="/tin-tuc/{{firstItem.url}}">{{firstItem.title}}</a></h5>
+                <div class="mt-3">{{firstItem.description}}</div>
+              </div>
+            </div>
+            <ng-container *ngFor="let new1 of news; let i = index">
+              <div *ngIf="i > 0 && i < 3" id="cap{{new1.id}}" style="display:none;">
+                <div class="carousel-cation">
+                  <h5><a routerLink="/tin-tuc/{{new1.url}}">{{new1.title}}</a></h5>
+                  <div class="mt-3">{{new1.description}}</div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-30 wow move-up" *ngFor="let new of news | paginate: {  totalItems: searchField.totalElements, itemsPerPage: searchField.pageSize, currentPage: searchField.pageIndex }">
+          <!--======= Single Blog Item Start ========-->
+          <div class="single-blog-item blog-grid">
+            <!-- Post Feature Start -->
+            <div class="post-feature blog-thumbnail">
+              <a routerLink="/tin-tuc/{{new.url}}" routerLinkActive="active">
+                <img class="img-fluid" src="{{new.postImage.pathUrl}}" alt="Blog Images" appHideMissing>
+              </a>
+            </div>
+            <!-- Post Feature End -->
+
+            <!-- Post info Start -->
+            <div class="post-info lg-blog-post-info">
+              <h5 class="font-weight--bold mb-2" style="font-size: 20px">
+                <a routerLink="/tin-tuc/{{new.url}}" routerLinkActive="active">{{new.title}}</a>
+              </h5>
+              <div class="text-desc">
+                {{new.description}}
+              </div>
+            </div>
+            <!-- Post info End -->
+          </div>
+          <!--===== Single Blog Item End =========-->
+        </div>
+
+        <div *ngIf="totalPages > 1" class="col-lg-12 wow move-up">
+          <div class="ht-pagination mt-30 pagination justify-content-center">
+            <div class="pagination-wrapper">
+              <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--====================  Blog Area End  ====================-->
+</div>
+<!--======== End News List ========-->
+
+<app-footer></app-footer>

@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="main-shop-wrap">
+    <!--======= Single Blog Item Start ========-->
+    <div class="py-4 mb-4">
+      <div class="align-items-center">
+        <div class="text-center">
+          <h3 class="chuyenmuc" style="color: #50b848">KHÁCH HÀNG MỤC TIÊU</h3>
+          <hr class="hrtag" />
+        </div>
+      </div>
+    </div>
+
+    <!-- shop-products-wrap start -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="grid">
+        <div class="row">
+          <div
+            *ngFor="let cus of customer"
+            class="col-lg-3 col-md-6 col-sm-6 wow move-up animate"
+            style="margin-bottom: 50px"
+          >
+            <!-- product-thumbnail Start -->
+            <div class="product-thumbnail">
+              <div class="wdc-iconbox">
+                <div class="box-icon" [ngStyle]="{ background: cus.bgIColor }">
+                  <span
+                    ><i class="{{ cus.icon }}" style="padding-top: 23px"></i
+                  ></span>
+                </div>
+              </div>
+              <div class="product-thumbnail-box">
+                <div class="box-content">
+                  <span class="title">{{ cus.name }}</span>
+                  <div
+                    class="desc"
+                    data-toggle="tooltip"
+                    title="{{ cus.description }}"
+                  >
+                    {{ cus.description }}
+                  </div>
+                </div>
+                <div class="box-link">
+                  <a
+                    routerLink="/khach-hang/{{ cus.url }}"
+                    routerLinkActive="active"
+                  >
+                    <span>Quan tâm</span>
+                    <i class="fa fa-arrow-right ml-3"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- product-thumbnail End -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--===== Single Blog Item End =========-->
+  </div>
+</div>

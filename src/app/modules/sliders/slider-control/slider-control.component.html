@@ -1,0 +1,139 @@
+<div class="toolbar py-1">
+  <!--begin::Container-->
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <div class="page-title d-flex align-items-center flex-wrap mr-3 p-3">
+      <!--begin::Title-->
+      <h6 class="d-flex align-items-center text-dark fw-bold my-1">Trình chiếu
+        <!--begin::Separator-->
+        <span class="h-20px border-gray-200 border-start mr-3 mx-2">/</span>
+        <!--end::Separator-->
+        <!--begin::Description-->
+        <a routerLink="../banner" routerLinkActive="active">
+          <small class="text-muted fs-7 fw-semibold my-1 ml-1">Banner</small>
+        </a>
+        <!--end::Description-->
+      </h6>
+      <!--end::Title-->
+    </div>
+
+    <!--begin::Action group-->
+    <div class="d-flex align-items-center flex-wrap">
+
+      <!--begin::Wrapper-->
+      <div class="d-flex align-items-center">
+        <!--begin::Actions-->
+        <div class="menu-item">
+          <div class="menu-link">
+            <a class="ht-btn-custom" routerLink="add-new" routerLinkActive="active" class="p-action-btn hint--rounded hint--bounce hint--bottom-left" aria-label="Thêm mới">
+              <i class="fas fa-file-plus fa-lg"></i>
+            </a>
+          </div>
+        </div>
+        <!--end::Actions-->
+      </div>
+      <!--end::Wrapper-->
+    </div>
+    <!--end::Action group-->
+  </div>
+  <!--end::Container-->
+</div>
+
+<!--begin::Container-->
+<div class="d-flex flex-column flex-column-fluid">
+  <div class="site-wrapper-reveal">
+    <div class="blog-pages-wrapper section-space--pt_100 section-space--pb_40">
+      <div class="container-fluid">
+        <div class="tab-pane active" id="grid">
+          <div class="row">
+            <div class="col-lg-8">
+              <!--============ team-member-wrapper Start ====================-->
+              <div class="team-member-wrapper py-3 default-bg" id="team-section">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="section-title text-center section-space--mb_15">
+                        <div class="img-target-box">
+                          <img src="{{target.url}}" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="multiple-items">
+                    <ngx-slick-carousel class="carousel" [config]="slideConfig">
+                      <div ngxSlickItem *ngFor="let slide of sliders" class="slide">
+                        <div class="team-image" (click)="choose(slide)">
+                          <img class="img-fluid" src="{{slide.pathUrl}}" id="{{slide.id}}" alt="{{slide.name}}">
+                        </div>
+                      </div>
+                    </ngx-slick-carousel>
+                  </div>
+                </div>
+              </div>
+              <!--============ team-member-wrapper End ====================-->
+            </div>
+
+            <div class="col-lg-4">
+              <div class="d-flex flex-column">
+                <h6>Thông tin</h6>
+
+                <div class="select-content-box">
+                  <div class="select-content-item">
+                    <span><strong>Id: </strong></span>
+                    <span>{{target.id}}</span>
+                  </div>
+
+                  <div class="select-content-item">
+                    <span><strong>Tên: </strong></span>
+                    <span>{{target.name}}</span>
+                  </div>
+
+                  <div class="select-content-item">
+                    <span><strong>Đường dẫn: </strong></span>
+                    <span class="image-url" title="{{target.url}}">{{target.url}}</span>
+                  </div>
+
+                  <div class="select-content-item">
+                    <span><strong>Liên kết: </strong></span>
+                    <span>{{target.link}}</span>
+                  </div>
+
+                  <div class="select-content-item">
+                    <span><strong>Trạng thái: </strong></span>
+                    <div *ngIf="target.active; else elseBlock">
+                        <span style="color: #50b848">
+                          <i class="fa fa-dot-circle fa-xs"></i>
+                        </span>
+                      <span class="ml-1">Hoạt động</span>
+                    </div>
+                    <ng-template #elseBlock>
+                        <span style="color: #e6c13d">
+                          <i class="fa fa-dot-circle fa-xs"></i>
+                        </span>
+                      <span>Tạm ẩn</span>
+                    </ng-template>
+                  </div>
+
+                  <div class="action-box">
+                    <button class="btn bg-success" *ngIf="target.active; else elseButton" (click)="hideImage(target.id)">
+                      <i class="far fa-eye-slash"></i>
+                    </button>
+                    <ng-template #elseButton>
+                      <button class="btn bg-warning" (click)="show(target.id)">
+                        <i class="far fa-eye"></i>
+                      </button>
+                    </ng-template>
+                    <button (click)="updateSlider(target.id)" class="btn">
+                      <i class="fa fa-pen"></i>
+                    </button>
+                    <button class="btn bg-danger"><i class="far fa-trash-alt"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Container-->

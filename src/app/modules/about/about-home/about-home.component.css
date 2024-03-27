@@ -1,0 +1,16 @@
+.hrtag{
+  background: #50B848;
+  border: 0;
+  outline: 0;
+  height: 2px;
+  width: 200px;
+}
+.service-link a{
+  color: #fff;
+  border-radius: 5px;
+  background: #50b848;
+}
+.service-link a:hover{
+  color: #fff;
+  background: #0d0d0d;
+}

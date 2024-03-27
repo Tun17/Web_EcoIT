@@ -1,0 +1,10 @@
+.breadcrumb-box{
+  width: 100%;
+}
+.breadcrumb-box img{
+  width: 100%;
+  object-fit: cover;
+}
+.content{
+  color: #333333;
+}

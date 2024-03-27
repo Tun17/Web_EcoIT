@@ -1,0 +1,36 @@
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog{
+  max-width: 880px;
+}
+
+.error-mess{
+  position: relative;
+  top: 3px;
+  color: #f00;
+  background-color: #f8d7da;
+  padding: 5px 15px;
+  border-radius: 4px;
+  width: fit-content;
+  margin: 0 auto;
+  animation-name: topDown;
+  animation-duration: 0.3s;
+  box-shadow: 0 4px 32px rgb(51 51 51 / 7%);
+}
+
+@keyframes topDown {
+  from {top: -40px;}
+  to {top: 3px;}
+}

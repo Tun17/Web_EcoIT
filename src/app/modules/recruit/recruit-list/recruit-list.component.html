@@ -1,0 +1,97 @@
+<app-nav-list></app-nav-list>
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-box">
+  <img src="assets/images/banners/banner-tuyen-dung-2.jpg" class="img-fluid">
+</div>
+<!-- breadcrumb-area end -->
+
+<!--====================  Blog Area Start ====================-->
+<div class="blog-pages-wrapper section-space--ptb_30">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="main-blog-wrap">
+          <!--======= Single Blog Item Start ========-->
+          <div class="pb-4 mb-4">
+            <div class="align-items-center">
+              <div class="text-center">
+                <h4 class="chuyenmuc" style="color: #50B848;">TUYỂN DỤNG</h4>
+                <hr class="hrtag">
+              </div>
+            </div>
+          </div>
+          <div class="single-blog-item">
+            <!-- Post info Start -->
+            <div class="post-info lg-blog-post-info wow move-up" *ngFor="let r of recruit">
+              <div class="font-weight--bold" style="color: #50b848; margin-bottom: 10px">
+                <a routerLink="/tuyen-dung/{{r.url}}" routerLinkActive="active">{{r.title}}</a>
+              </div>
+              <div class="single-blog-content">
+                <div class="ava-box">
+                  <img src="{{r.thumb.pathUrl}}" alt="Blog Images" appHideMissing>
+                </div>
+                <div class="d-flex flex-column justify-content-between w-100">
+                  <div class="text-desc">
+                    {{r.description}}
+                  </div>
+                  <a routerLink="/tuyen-dung/{{r.url}}" routerLinkActive="active" class="text-right" style="color: #50b848; text-decoration: underline;">Xem chi tiết</a>
+                </div>
+              </div>
+            </div>
+            <!-- Post info End -->
+          </div>
+          <!--===== Single Blog Item End =========-->
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="page-sidebar-content-wrapper page-sidebar-right  small-mt__40 tablet-mt__40">
+          <div class="box-search-tuyen-dung">
+            <form action="https://ecoit.asia/tuyen-dung">
+              <input type="hidden" name="post_type" value="category">
+              <input type="hidden" name="slug_cate" value="tuyen-dung">
+              <div class="form-group">
+                <input type="text" class="form-control" id="usr" name="vitri" value="" spellcheck="false" data-ms-editor="true">
+              </div>
+              <div class="form-group">
+                <select name="cat_id" id="input" class="form-control">
+                  <option value="">Chọn vị trí tuyển dụng</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-secondary btn-tuyendung" type="submit"><i class="fa fa-search"></i> Tìm việc</button>
+              </div>
+            </form>
+          </div>
+          <!-- === Sidebar Widget Start ===-->
+          <div class="wpb_column vc_column_container wow move-up">
+            <div class="vc_column-inner">
+              <div class="wpb_wrapper">
+                <div class="wdc-heading style-1 text-left">
+                  <ul class="box-info-company">
+                    <li class="text-bold">
+                      <a routerLink="/ve-chung-toi" routerLinkActive="ative">Về Chúng Tôi</a>
+                    </li>
+                    <li class="text-bold">
+                      <a href="https://ecoit.asia/ho-so-nang-luc/">Hồ Sơ Năng Lực</a>
+                    </li>
+                    <li class="text-bold">
+                      <a href="https://ecoit.asia/khach-hang/">Khách Hàng Tiêu Biểu</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- === Sidebar Widget End === -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--====================  Blog Area End  ====================-->
+
+<!--====================  footer area ====================-->
+<app-footer></app-footer>
+<!--====================  End of footer area  ====================-->

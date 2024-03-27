@@ -1,0 +1,36 @@
+<div class="container section-space--pb_90">
+  <div class="main-shop-wrap">
+    <div class="py-4 mb-4">
+      <div class="align-items-center">
+        <div class="text-center">
+          <h3 class="chuyenmuc" style="color: #50B848;">SẢN PHẨM CHIẾN LƯỢC</h3>
+          <hr class="hrtag">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2dot4 col-md-4 wow move-up" style="padding: 10px" *ngFor="let product of products">
+      <!-- Service Grid Start -->
+      <div class="service-grid m-0">
+        <div class="ht-service-box--two text-center style-03">
+          <a routerLink="/san-pham/{{product.url}}" routerLinkActive="active" style="padding: 20px">
+            <div class="image">
+              <img src="{{product.thumb.pathUrl}}" class="img-fluid" alt="aeroland-startup-box-icon-01" appHideMissing>
+            </div>
+            <div class="content">
+              <h6 class="heading" style="font-size: 16px">{{product.name}}</h6>
+              <div class="service_text" data-toggle="tooltip" title="{{product.description}}">{{product.description}}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- Service Grid End -->
+    </div>
+  </div>
+
+  <div class="service-link text-center mt-15">
+    <a href="/lien-he">ĐĂNG KÝ TƯ VẤN</a>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="header align-items-stretch">
+  <!--begin::Container-->
+  <div class="container-fluid d-flex align-items-stretch justify-content-between">
+    <!--begin::Wrapper-->
+    <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+      <!--begin::Navbar-->
+      <div class="d-flex align-items-stretch">
+        <!--begin::Menu wrapper-->
+        <div class="header-menu align-items-stretch">
+          <!--begin::Menu-->
+          <div class="d-flex my-5 my-lg-0 px-2 px-lg-0 align-items-stretch">
+            <!--begin:Menu item-->
+            <div class="menu-item here menu-lg-down-accordion me-0 me-lg-2">
+              <!--begin:Menu link-->
+              <div class="menu-link">
+                <span class="menu-title">{{today}}, {{day}}/{{month}}/{{year}}</span>
+              </div>
+              <!--end:Menu link-->
+            </div>
+            <!--end:Menu item-->
+            <!--begin:Menu item-->
+            <div class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+              <!--begin:Menu link-->
+              <span class="menu-link py-3">
+                      <span class="menu-title">Trợ giúp</span>
+                      <span class="menu-arrow d-lg-none"></span>
+                    </span>
+              <!--end:Menu link-->
+            </div>
+            <!--end:Menu item-->
+          </div>
+          <!--end::Menu-->
+        </div>
+        <!--end::Menu wrapper-->
+      </div>
+      <!--end::Navbar-->
+      <div class="d-flex align-items-stretch flex-shrink-0">
+<!--        &lt;!&ndash;begin::Activities&ndash;&gt;-->
+<!--        <div class="d-flex align-items-center ml-lg-3">-->
+<!--          <div class="icon-head">-->
+<!--            <a href="#"><i class="fa fa-bell"></i></a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;end::Activities&ndash;&gt;-->
+<!--        <div class="d-flex align-items-center ml-lg-3">-->
+<!--          <div class="icon-head">-->
+<!--            <a href="#"><i class="fa fa-clipboard-check"></i></a>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="d-flex align-items-center ml-lg-3">-->
+<!--          <div class="icon-head">-->
+<!--            <a href="#"><i class="fa fa-th-large"></i></a>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="d-flex align-items-center ml-lg-3">-->
+<!--          <div class="icon-head">-->
+<!--            <button type="button" class="ht-btn-custom"><i class="fa fa-sun"></i></button>-->
+<!--          </div>-->
+<!--        </div>-->
+
+        <div class="d-flex align-items-center ml-lg-3 mr-2">
+          <div class="dropdown">
+            <div class="user-ava-box" data-toggle="dropdown">
+              <img src="../assets/images/gallery/portfolio-01-480x480.jpg" alt="image">
+            </div>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="about" routerLinkActive="active">Về chúng tôi</a>
+              <a class="dropdown-item" routerLink="albums" routerLinkActive="active">Kho ảnh</a>
+              <a class="dropdown-item border-top-drak" (click)="logout()">Đăng xuất</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end::Wrapper-->
+  </div>
+  <!--end::Container-->
+</div>

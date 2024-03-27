@@ -1,0 +1,32 @@
+<div class="wow flipInX section-space--pb_60 section-space--mt_20">
+  <div class="wpb_row vc_row-fluid vc_row-has-fill wpb_section wpb_padding wpb_color">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow move-up">
+          <div class="section-title text-center section-space--mb_30">
+            <h3 class="content-text">NHỮNG CON SỐ TIÊU BIỂU</h3>
+            <hr class="hrtag">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 wpb_column vc_column_container" *ngFor="let tNum of numbers">
+          <div class="vc_column-inner">
+            <div class="wpb_wrapper">
+              <div class="wdc-counter style-icon icon-top">
+                <h5 class="box-icon"><i class="{{tNum.icon}}"></i></h5>
+                <div class="box-inner">
+                  <animated-digit [digit]="tNum.num"></animated-digit>
+<!--                  <div class="counter-number" [id]="tNum.num"></div>-->
+                  <h6 class="chuyenmuc">{{tNum.description}}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

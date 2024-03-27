@@ -1,0 +1,141 @@
+<div class="toolbar py-1">
+  <!--begin::Container-->
+  <div class="container-fluid d-flex align-items-center">
+    <div class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+      <!--begin::Title-->
+      <h6 class="d-flex align-items-center text-dark fw-bold my-1 fs-3">Điều hướng
+        <!--begin::Separator-->
+        <span class="h-20px border-gray-200 border-start ms-3 mx-2"></span>
+        <!--end::Separator-->
+        <!--begin::Description-->
+        <small class="text-muted fs-7 fw-semibold my-1 ms-1">#XRS-45670</small>
+        <!--end::Description-->
+      </h6>
+      <!--end::Title-->
+    </div>
+    <!--begin::Page title-->
+    <div class="flex-grow-1 flex-shrink-0 me-5">
+      <!--begin::Search-->
+      <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center ml-lg-3">
+          <form (ngSubmit)="search()">
+            <div class="input-group" style="padding: 0.65rem 1rem;">
+              <input type="text" class="form-control" name="keyword" [(ngModel)]="searchField.keyword" placeholder="Viết gì đó...">
+              <div class="input-group-append">
+                <button type="submit" class="input-group-text"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--end::Search-->
+    </div>
+    <!--end::Page title-->
+    <!--begin::Action group-->
+    <div class="d-flex align-items-center flex-wrap">
+      <div class="d-flex align-items-center">
+        <div class="menu-item mr-3" *ngIf="actionT" style="border-right: 1px solid #ccc">
+          <div class="menu-link" (click)="updateModal(actionId)">
+            <a class="ht-btn-custom p-action-btn hint--rounded hint--bounce hint--bottom-left" aria-label="Chỉnh sửa">
+              <i class="far fa-pen-square fa-lg"></i>
+            </a>
+          </div>
+          <div class="menu-link" (click)="deleteNav(actionId)">
+            <a class="ht-btn-custom p-action-btn hint--rounded hint--bounce hint--bottom-left" aria-label="Xóa">
+              <i class="far fa-trash-alt fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+
+        <!--begin::Daterangepicker-->
+        <div class="menu-item here">
+          <div class="menu-link">
+            <span class="fw-semibold mr-1">Số mục mỗi trang:</span>
+            <select (change)="changePageSize($event)" class="custom-select">
+              <option *ngFor="let size of pageSizes" [ngValue]="size">
+                {{ size }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <!--end::Daterangepicker-->
+        <!--begin::Actions-->
+        <div class="menu-item del-area" *ngIf="selects">
+          <span class="pl-2 mx-2">Đã chọn:</span>
+
+          <div class="number">{{selects}}</div>
+
+          <div class="menu-link" (click)="clearAll()">
+            <a class="ht-btn-custom p-action-btn hint--rounded hint--bounce hint--bottom-left" aria-label="Xóa tất cả">
+              <i class="far fa-trash-alt fa-lg"></i>
+            </a>
+          </div>
+          <div class="menu-link" (click)="uncheckAll()">
+            <a class="ht-btn-custom p-action-btn hint--rounded hint--bounce hint--bottom-left" aria-label="Hủy">
+              <i class="far fa-times fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-link">
+            <a (click)="addNew()" class="ht-btn-custom p-action-btn hint--rounded hint--bounce hint--bottom-left" aria-label="Thêm mới">
+              <i class="fas fa-file-plus fa-lg"></i>
+            </a>
+          </div>
+        </div>
+        <!--end::Actions-->
+      </div>
+      <!--end::Wrapper-->
+    </div>
+    <!--end::Action group-->
+  </div>
+  <!--end::Container-->
+</div>
+
+<!--begin::Container-->
+<div class="d-flex flex-column flex-column-fluid">
+  <div class="site-wrapper-reveal">
+    <div class="blog-pages-wrapper section-space--pt_100 section-space--pb_40">
+      <div class="container">
+        <div class="faq-wrapper">
+          <div id="accordion">
+            <ul>
+              <li *ngFor="let nav1 of navList">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <a class="has-child collapsed {{nav1.navChild.length > 0 ? 'active' : ''}}" data-toggle="collapse" href="#collapse{{nav1.id}}"></a>
+                    <input #checkboxes type="checkbox" [value]="nav1.selected" (change)="onCheckChange($event, nav1)">
+                    <span class="slacttar px-2 ml-2" id="{{nav1.id}}" (click)="actionTarget($event)">{{nav1.name}}</span>
+                  </div>
+                  <a href="{{nav1.url}}" target="_blank">{{nav1.url}}</a>
+                </div>
+                <div id="collapse{{nav1.id}}" class="link-child collapse" data-parent="#accordion">
+                  <ul class="ml-4">
+                    <li *ngFor="let nav2 of nav1.navChild" class="d-flex justify-content-between align-items-center">
+                      <div style="width: 500px">
+                        <input #checkboxes type="checkbox" [value]="nav2.selected" (change)="onCheckChange($event, nav2)">
+                        <span class="slacttar ml-2" id="{{nav2.id}}" (click)="actionTarget($event)">{{nav2.name}}</span>
+                      </div>
+                      <span style="width: 400px">{{nav2.url}}</span>
+                    </li>
+                    <li>
+                      <a type="button" class="ht-btn-custom" (click)="addChild($event)">
+                        <i class="far fa-plus-circle mr-1"></i>
+                        <span id="{{nav1.id}}">Thêm...</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Container-->
+
+<!--<router-outlet></router-outlet>-->

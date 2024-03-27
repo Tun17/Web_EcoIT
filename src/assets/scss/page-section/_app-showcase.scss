@@ -1,0 +1,156 @@
+/*=============================================
+=        38. App Showcase Css           =
+=============================================*/
+
+.app-showcase-hero-area {
+    background: #5e61e7;
+    background-image: url(../images/hero/aeroland-app-showcase-hero-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    
+    & .vc_row-separator {
+        &  svg {
+            height: 178px;
+            fill: #fff;
+        }
+    } 
+}
+
+.app-showcase-hero__text {
+    padding: 140px 0 90px;
+    & .heading {
+        font-weight: 300;
+    }
+    .showcase-background__links img {
+        border-radius: 5px;
+        margin-right: 10px;
+        @media #{$small-mobile}{
+            margin-right: 0px;
+            margin-top: 10px;
+        }
+    }
+}
+.app-showcase-hero__sub {
+    margin-top: 15px;
+    text-align: center;
+    p {
+        color: $white;
+        font-size: 18px;
+    }
+}
+.app-showcase-progress__title {
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    position: relative;
+    & .chart-progress__inner-wrapper {
+        padding: 30px;
+    }
+}
+.app-showcase-step-wrap {
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#F8F8F8),color-stop(50%,#ECEEFA),color-stop(100%,#E3E9FF));
+    background: -moz-linear-gradient(180deg,#F8F8F8 0,#ECEEFA 50%,#E3E9FF 100%);
+    background: -webkit-linear-gradient(180deg,#F8F8F8 0,#ECEEFA 50%,#E3E9FF 100%);
+    background: -o-linear-gradient(180deg,#F8F8F8 0,#ECEEFA 50%,#E3E9FF 100%);
+    background: -ms-linear-gradient(180deg,#F8F8F8 0,#ECEEFA 50%,#E3E9FF 100%);
+    background: linear-gradient(180deg,#F8F8F8 0,#ECEEFA 50%,#E3E9FF 100%);
+}
+.feature-app-showcase {
+    & .app-showcase-image__media {
+        text-align: right;
+        margin-right: 50px;
+    }
+    & .app-showcase__content {
+        max-width: 570px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        
+        & .sub-text {
+            font-size: 18px;
+            line-height: 1.78;
+            margin-top: 30px;
+        }
+        
+        @media #{$large-mobile, $tablet-device}{
+            margin-top: 30px;
+        }
+    }
+}
+.app-showcase-section__titel {
+    position: relative;
+
+    svg:not(:root) {
+        overflow: hidden;
+    }
+    .vc_row-separator {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        z-index: 1;
+        line-height: 0;
+    }
+    .vc_row-separator.bottom {
+        bottom: 0;
+    }
+    .vc_row-separator.center_curve.bottom {
+        transform: rotate(-180deg);
+    }
+     .vc_row-separator svg {
+        height: 130px;
+    }
+    .vc_row-separator svg {
+        fill: #f8f8f8;
+    }
+
+    .vc_row-separator svg {
+        height: 130px;
+    }
+    .vc_row-separator.top svg {
+        height: 120px;
+    }
+    .vc_row-separator.center_curve.top svg {
+        fill: #e3e9ff;
+    }
+}
+.app-showcase-process-wrapper {
+    position: relative;
+}
+.app-showcase-process-step {
+    &__content {
+        max-width: 470px;
+        width: 100%;
+        & .sub__title {
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 1.34;
+            & h6 {
+                color: #ee7455;
+                font-size: 15px;
+            }
+        }
+        & .sub-text {
+            font-size: 18px;
+            line-height: 1.78;
+            margin-top: 20px;
+        }
+        
+    }
+    &__one {
+        & .app-showcase-process-step__media {
+            & img {
+                border-radius: 37px;
+            }
+        } 
+    }
+    &__three {
+        & .app-showcase-process-step__media {
+            margin-left: -113px;
+            @media #{$large-mobile, $tablet-device}{
+                margin-left: 0;
+            }
+        } 
+    }
+}

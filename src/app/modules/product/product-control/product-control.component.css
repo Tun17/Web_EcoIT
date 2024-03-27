@@ -1,0 +1,118 @@
+.wdc-input{
+  width: 100%;
+  /*height: 95%;*/
+}
+.wdc-input img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*============================= Navigator =================================*/
+.container-fluid{
+  padding: 0 30px;
+}
+
+.menu-item{
+  display: flex;
+  align-items: center;
+  padding: 0.15rem 0;
+  margin-right: 0.5rem;
+}
+.menu-item .menu-link{
+  padding: 0.375rem 1rem;
+}
+.menu-item.here .menu-link {
+  transition: color 0.2s ease;
+  background-color: #F4F6FA;
+  color: #009ef7;
+  border-radius: 0.475rem;
+}
+
+.ht-btn-custom{
+  outline: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: inherit;
+}
+
+/*-------------------------------------------------------------*/
+.toolbar{
+  position: fixed;
+  right: 0;
+  left: 120px;
+  z-index: 99;
+  background-color: #fff;
+  height: 65px;
+  box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+  border-top: 1px solid #eff2f5;
+}
+
+.content-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.image-list{
+  display: flex;
+  width: 170px;
+  height: 150px;
+  padding: 10px;
+}
+.image-list img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btn-box .ht-btn-custom{
+  height: 150px;
+  width: 60px;
+  color: #fff;
+  background: #0C9DBF;
+}
+.btn-box .ht-btn-custom:hover{
+  width: 70px;
+}
+
+.faq-wrapper .card-header h5 button{
+  border-radius: 0;
+}
+
+.page-dis{
+  font-weight: 500;
+  padding: 0 10px;
+  display: block;
+  text-align: center;
+  line-height: 41px;
+  min-width: 41px;
+  height: 41px;
+  text-transform: uppercase;
+  color: #ababab;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+.custom-select{
+  width: 80px;
+}
+
+.aeroland-startup-box-icon{
+  background: #ddd;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  width: 190px;
+  height: 150px;
+  display: none;
+}
+.aeroland-startup-box-icon:hover{
+  display: block;
+}
+
+.product-name{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 8px;
+}

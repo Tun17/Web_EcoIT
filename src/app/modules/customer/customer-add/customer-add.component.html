@@ -1,0 +1,82 @@
+<div class="site-wrapper-reveal">
+  <!--====================  Blog Area Start ====================-->
+  <div class="blog-pages-wrapper wow move-up section-space--ptb_30">
+    <form (ngSubmit)="onSubmit()">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="contact-inner">
+              <span><strong>Khách hàng</strong></span>
+              <input name="name" [(ngModel)]="customer.name" type="text">
+            </div>
+
+            <div class="contact-inner contact-message">
+              <span><strong>Mô tả</strong></span>
+              <textarea style="height: 120px" name="description" [(ngModel)]="customer.description"></textarea>
+            </div>
+
+            <div class="contact-inner">
+              <span><strong>Sản phẩm</strong></span>
+              <ul class="list-group">
+                <li class="list-group-item" *ngFor="let p of products">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" [value]="p.selected" [checked]="p.selected" (change)="onCheckChange($event, p)" class="custom-control-input" id="customCheck{{p.id}}">
+                    <label class="cursor-pointer font-italic d-block custom-control-label" for="customCheck{{p.id}}">{{p.name}}</label>
+                  </div>
+                </li>
+              </ul>
+              <div>Không tìm thấy sản phẩm mong muốn?
+                <a (click)="addMoreProduct()" style="color: #50b848">Thêm mới</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="contact-inner">
+              <span><strong>Ảnh bìa</strong></span>
+              <div class="image-cover-box">
+                <div class="close" *ngIf="image">
+                  <span (click)="notNeedFile()"><i class="fas fa-folder-minus"></i></span>
+                </div>
+                <img src="{{image}}" alt="" appHideMissing>
+                <input type="file" value="" (change)="onChange($event)" id="file-in">
+              </div>
+            </div>
+
+            <div class="contact-inner">
+              <span><strong>Biểu tượng</strong></span>
+              <div class="wdc-box">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="box-icon" [ngStyle]="{'background': customer.bgIColor}">
+                        <span><i class="{{customer.icon}}" style="padding-top: 23px"></i></span>
+                        <input type="color" name="bgIColor" [(ngModel)]="customer.bgIColor" class="choose-color" value="#009cff">
+                      </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <div class="wdc-input">
+                        <input type="text" name="icon" [(ngModel)]="customer.icon" placeholder="Nhập mã biểu tượng">
+                        <p>*Mã phải bắt đầu bằng: <strong>fa</strong>, <strong>far</strong> hoặc <strong>fas</strong></p>
+                        <p>*Vd: <strong>fa fa-university</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment-submit-btn">
+              <div class="mb-3" style="color: #f00" *ngIf="submitFail">{{errorMessage}}</div>
+              <button class="ht-btn ht-btn-md mr-2" type="submit">Lưu</button>
+              <button class="ht-btn ht-btn-md ml-2" style="background: #ccc" type="button" (click)="goToCustomerList()">Hủy</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!--====================  Blog Area End  ====================-->
+</div>

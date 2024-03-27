@@ -1,0 +1,67 @@
+/*=============================
+    42. Ebook Css
+==============================*/
+.box-page {
+    background: url(../images/patterns/body-special-bg-shape-01.png) right top no-repeat, url(../images/patterns/body-special-bg-shape-02.png) left top 570px no-repeat, url(../images/patterns/body-special-bg-shape-03.png) left bottom no-repeat, url(../images/patterns/body-special-bg-shape-04.png) right bottom no-repeat, #e4e8f6; 
+}
+.site-wrapper-box {
+    max-width: 1820px;
+    margin: 0px auto;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.site-wrapper {
+    background: #fff;
+}
+
+.ebook-chanters-bg {
+     background: url(../images/patterns/aeroland-ebook-image-02.png );
+    background-repeat: no-repeat;
+    background-position: top left 45%;
+}
+.ebook-chanters-images {
+    margin-top: 100px;
+    & img {
+        border-radius: 25px;
+        border: 5px solid #e8e8e8;
+        box-shadow: 40px 40px 100px rgba(0,0,0,0.1);
+    }
+}
+.section-space-custom-pt {
+    padding-top: 220px;
+    margin-top: -100px;
+    @media #{$large-mobile}{
+        padding-top: 180px;
+    }
+}
+.ebook-mailchip-title {
+    & .heading {
+        color: #6d70a6;
+        & mark {
+            color: #38cb89;
+            background: none;
+            text-decoration: none;
+        }
+    }
+}
+.newsletter-form {
+    &--ebook {
+        & input {
+            width: 100%;
+            background: transparent !important;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 3px solid #000;
+                border-bottom-color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 48px;
+            padding: 14px 0 23px;
+            border-color: rgba(89,69,230,0.20);
+            color: $theme-color--default;
+            @media #{$large-mobile}{
+                font-size: 20px;
+            }
+        }
+    }
+}

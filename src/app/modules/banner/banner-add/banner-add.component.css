@@ -1,0 +1,47 @@
+.Popup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0) ;
+  background-color: rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+/* The Close Button */
+.close-btn {
+  color: #888;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+.close-btn:hover, .close-btn:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content{
+  width: 900px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-content{
+  display: flex;
+  flex-direction: column;
+}
+.main-content img{
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+.main-content .close{
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  right: 20px;
+  color: #f00;
+}

@@ -1,0 +1,93 @@
+<!--begin::Aside-->
+<div class="aside section-space--pb_40 default-bg">
+  <!--begin::Brand-->
+  <div class="aside-logo" id="kt_aside_logo">
+    <!--begin::Logo-->
+    <a href="/trang-chu" target="_blank" class="d-flex align-items-center">
+      <img alt="Logo" src="/assets/images/diacau.png" class="logo">
+    </a>
+    <!--end::Logo-->
+  </div>
+  <!--end::Brand-->
+
+  <!--begin::Aside menu-->
+  <div class="aside-menu flex-column-fluid">
+    <!--begin::Aside Menu-->
+    <div class="hover-scroll-overlay-y my-3" style="height: 200px;">
+      <!--begin::Menu-->
+      <div class="d-flex flex-column">
+        <!--begin:Menu item-->
+        <div class="menu-item py-2" id="active-d">
+          <!--begin:Menu link-->
+          <a routerLink="dashboard" routerLinkActive="active" class="menu-link menu-center">
+            <span class="menu-icon"><i class="far fa-home"></i></span>
+          </a>
+          <!--end:Menu link-->
+        </div>
+        <!--end:Menu item-->
+        <!--begin:Menu item-->
+        <div class="menu-item py-2 hint--black hint--rounded hint--right" aria-label="Tin tức - Tuyển dụng" id="active-n">
+          <!--begin:Menu link-->
+          <a routerLink="post" routerLinkActive="active" class="menu-link menu-center">
+            <span class="menu-icon"><i class="far fa-newspaper"></i></span>
+          </a>
+          <!--end:Menu link-->
+        </div>
+
+        <div class="menu-item py-2 hint--black hint--rounded hint--right" aria-label="Blog">
+          <a routerLink="blog" routerLinkActive="active" class="menu-link menu-center">
+            <span class="menu-icon"><i class="far fa-rss-square"></i></span>
+          </a>
+        </div>
+
+        <div class="menu-item py-2 hint--black hint--rounded hint--right" aria-label="Khách hàng" id="active-c">
+          <!--begin:Menu link-->
+          <a routerLink="customer" routerLinkActive="active" class="menu-link menu-center">
+            <span class="menu-icon"><i class="far fa-handshake"></i></span>
+          </a>
+          <!--end:Menu link-->
+        </div>
+        <!--end:Menu item-->
+        <!--begin:Menu item-->
+        <div class="menu-item py-2 hint--black hint--rounded hint--right" aria-label="Sản phẩm" id="active-p">
+          <a routerLink="product" routerLinkActive="active" class="menu-link menu-center">
+            <span class="menu-icon"><i class="far fa-box"></i></span>
+          </a>
+        </div>
+        <!--end:Menu item-->
+
+        <!--begin:Menu item-->
+        <div class="menu-item py-2 hint--black hint--rounded hint--right" aria-label="Trình chiếu" id="active-sl">
+          <a routerLink="sliders" routerLinkActive="active" class="menu-link menu-center">
+            <span class="menu-icon"><i class="far fa-columns"></i></span>
+          </a>
+        </div>
+        <!--end:Menu item-->
+
+        <!--begin:Menu item-->
+        <div class="menu-item py-2 hint--black hint--rounded hint--right" aria-label="Điều hướng" id="active-nav">
+          <a routerLink="navigation" routerLinkActive="active" class="menu-link menu-center">
+            <span class="menu-icon"><i class="fas fa-bars"></i></span>
+          </a>
+        </div>
+        <!--end:Menu item-->
+
+        <!--begin:Menu item-->
+        <div *ngIf="role.includes('ROLE_ADMIN')" class="menu-item py-2 hint--black hint--rounded hint--right" aria-label="Tài khoản">
+          <a routerLink="user" routerLinkActive="active" class="menu-link menu-center">
+            <span class="menu-icon"><i class="far fa-users"></i></span>
+          </a>
+        </div>
+        <!--end:Menu item-->
+      </div>
+      <!--end::Menu-->
+    </div>
+    <!--end::Aside Menu-->
+  </div>
+  <!--end::Aside menu-->
+
+  <div class="aside-more">
+    <i class="far fa-chevron-circle-down"></i>
+  </div>
+</div>
+<!--end::Aside-->

@@ -1,0 +1,81 @@
+<div class="box-eco">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card-body p-md-5 mx-md-4">
+        <div class="text-center">
+          <img
+            src="assets/images/avatars/logoEcoit.jpg"
+            style="width: 185px"
+            alt="logo"
+          />
+          <h4 class="mt-1 mb-5 pb-1">Đăng nhập</h4>
+        </div>
+
+        <form (ngSubmit)="onSubmit()" ngNativeValidate>
+          <div *ngIf="isLoginFailed" class="error-mess mb-4">
+            {{ errorMessage }}
+          </div>
+
+          <div class="form-outline mb-4">
+            <input
+              type="text"
+              name="username"
+              [(ngModel)]="form.username"
+              class="form-control"
+              placeholder="Tên đăng nhập"
+              required
+            />
+          </div>
+
+          <div class="form-outline mb-4">
+            <input
+              type="password"
+              name="password"
+              [(ngModel)]="form.password"
+              class="form-control"
+              placeholder="Mật khẩu"
+              required
+            />
+          </div>
+
+          <div class="form-outline mb-4">
+            <input type="hidden" name="role" />
+          </div>
+
+          <!-- Checkbox -->
+          <div class="save-pass">
+            <label class="save-pass-container"
+              >Nhớ mật khẩu?
+              <input
+                type="checkbox"
+                name="remember-me"
+                [(ngModel)]="form.remember"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <div class="text-center pt-1 mb-5 pb-1">
+            <button class="btn btn-block mb-3" type="submit">Đăng nhập</button>
+            <!--                <a class="text-muted" href="#!">Quên mật khẩu?</a>-->
+          </div>
+
+          <!--          <div class="d-flex align-items-center justify-content-center pb-4">-->
+          <!--            <p class="mb-0 mr-2">Bạn chưa có dài khoản?</p>-->
+          <!--            <a routerLink="/register" routerLinkActive="active" class="text-primary">Đăng ký ngay</a>-->
+          <!--          </div>-->
+        </form>
+      </div>
+    </div>
+
+    <div class="col-lg-8">
+      <div class="img-over">
+        <img
+          src="../../../../assets/images/bg/13-1198x800.jpg"
+          class="img-fluid"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-button{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+}
+.modal-button button{
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.ht-btn-custom{
+  outline: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: inherit;
+}
+
+.modal-content-box{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+}
+.modal-content-box input{
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+.modal-content-box select{
+  height: 40px;
+}

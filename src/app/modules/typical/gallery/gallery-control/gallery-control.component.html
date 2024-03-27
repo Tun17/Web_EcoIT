@@ -1,0 +1,133 @@
+<div class="toolbar py-1">
+  <!--begin::Container-->
+  <div class="container-fluid d-flex align-items-center">
+    <div class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+      <!--begin::Title-->
+      <h6 class="d-flex align-items-center text-dark fw-bold my-1 fs-3">
+        <a routerLink="/admin/albums" routerLinkActive="active">
+          <small class="text-muted fs-7 fw-semibold my-1 ms-1">Kho ảnh</small>
+        </a>
+        <span class="h-20px border-gray-200 border-start ms-3 mx-2">/</span>
+        <span>Ảnh hoạt động</span>
+      </h6>
+      <!--end::Title-->
+    </div>
+    <!--begin::Page title-->
+    <div class="flex-grow-1 flex-shrink-0 me-5">
+
+    </div>
+    <!--end::Page title-->
+    <!--begin::Action group-->
+    <div class="d-flex align-items-center flex-wrap">
+      <!--begin::Wrapper-->
+      <div class="d-flex align-items-center">
+        <!--begin::Daterangepicker-->
+        <div class="menu-item here">
+          <div class="menu-link">
+            <span class="fw-semibold mr-1">Số mục mỗi trang:</span>
+            <select (change)="changePageSize($event)" class="custom-select" style="width: 80px;">
+              <option *ngFor="let size of pageSizes" [ngValue]="size">
+                {{ size }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <!--end::Daterangepicker-->
+        <!--begin::Actions-->
+        <div class="menu-item">
+          <div class="menu-link">
+            <a class="ht-btn-custom" routerLink="/admin/gallery" routerLinkActive="active" class="p-action-btn hint--rounded hint--bounce hint--bottom-left" aria-label="Nhập từ kho ảnh">
+              <i class="fas fa-file-import fa-lg"></i>
+            </a>
+          </div>
+          <div class="menu-link">
+            <a class="ht-btn-custom" routerLink="new" routerLinkActive="active" class="p-action-btn hint--rounded hint--bounce hint--bottom-left" aria-label="Thêm mới">
+              <i class="fas fa-file-plus fa-lg"></i>
+            </a>
+          </div>
+        </div>
+        <!--end::Actions-->
+      </div>
+      <!--end::Wrapper-->
+    </div>
+    <!--end::Action group-->
+  </div>
+  <!--end::Container-->
+</div>
+
+<!--begin::Container-->
+<div class="d-flex flex-column flex-column-fluid">
+  <div class="site-wrapper-reveal">
+    <div class="blog-pages-wrapper section-space--pt_100 section-space--pb_40">
+      <div class="container-fluid--cp-120">
+        <div class="tab-pane" id="grid">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="product-thumbnail__container">
+                <div class="faq-wrapper" *ngFor="let gallery of galleries">
+                  <div class="card">
+                    <div class="product-thumb-image" (click)="choose(gallery)">
+                      <img class="img-fluid" src="{{gallery.image.pathUrl}}" appHideMissing>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 info-box">
+              <div class="faq-wrapper">
+                <div class="card">
+                  <div class="img-target-box">
+                    <img class="img-fluid" src="{{target.url}}" alt="Blog Images" appHideMissing>
+                  </div>
+                  <div class="select-content-box">
+                    <div class="select-content-item">
+                      <span><strong>Tên: </strong></span>
+                      <span>{{target.name}}</span>
+                    </div>
+
+                    <div class="select-content-item">
+                      <span><strong>Đầu đề: </strong></span>
+                      <span>{{target.caption}}</span>
+                    </div>
+
+                    <div class="select-content-item">
+                      <span><strong>Mô tả: </strong></span>
+                      <span>{{target.description}}</span>
+                    </div>
+
+                    <div class="select-content-item">
+                      <span><strong>Trạng thái: </strong></span>
+                      <div *ngIf="target.active; else elseBlock">
+                        <span style="color: #50b848">
+                          <i class="fa fa-dot-circle fa-xs"></i>
+                        </span>
+                        <span class="ml-1">Hoạt động</span>
+                      </div>
+                      <ng-template #elseBlock>
+                        <span style="color: #e6c13d">
+                          <i class="fa fa-dot-circle fa-xs"></i>
+                        </span>
+                        <span>Tạm ẩn</span>
+                      </ng-template>
+                    </div>
+
+                    <div class="action-box">
+                      <button class="btn bg-success" *ngIf="target.active; else elseButton" (click)="hideImage(target.id)">Ẩn</button>
+                      <ng-template #elseButton>
+                        <button class="btn bg-warning" (click)="show(target.id)">Hiện</button>
+                      </ng-template>
+                      <a class="btn" routerLink="../image/update/{{target.id}}">Sửa</a>
+                      <button class="btn bg-danger">Xóa</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Container-->

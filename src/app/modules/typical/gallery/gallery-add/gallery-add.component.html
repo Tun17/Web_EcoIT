@@ -1,0 +1,41 @@
+<div class="site-wrapper-reveal">
+  <!--====================  Blog Area Start ====================-->
+  <div class="blog-pages-wrapper wow move-up section-space--ptb_120">
+    <form (ngSubmit)="onSubmit()">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9" style="margin: 0 auto">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="contact-inner">
+                    <div class="close" *ngIf="url">
+                      <span (click)="notNeedFile()"><i class="fas fa-folder-minus"></i></span>
+                    </div>
+                    <img src="{{url}}" alt="" appHideMissing>
+                    <input type="file" value="" (change)="onChange($event)" id="file-in">
+                  </div>
+                </div>
+
+                <div class="col-lg-8">
+                  <div class="contact-inner">
+                    <input type="text" name="caption" [(ngModel)]="gallery.caption" placeholder="*Mô tả">
+                  </div>
+                  <div class="contact-inner contact-message">
+                    <textarea style="height: 138px" name="description" [(ngModel)]="gallery.description" placeholder="*Chi tiết"></textarea>
+                  </div>
+
+                  <div class="comment-submit-btn">
+                    <button class="ht-btn ht-btn-md mr-2" type="submit">Lưu</button>
+                    <button class="ht-btn ht-btn-md ml-2" style="background: #ccc" type="button" (click)="goToTypicalList()">Hủy</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!--====================  Blog Area End  ====================-->
+</div>

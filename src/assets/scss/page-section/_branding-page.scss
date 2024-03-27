@@ -1,0 +1,49 @@
+
+/*=============================================
+=        37. Branding Page Css            =
+=============================================*/
+
+.branding-space--ptb {
+    padding-top: 239px;
+    padding-bottom: 148px;
+    @media #{$desktop-device} {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    @media #{$large-mobile} {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+.branding-hero-bg {
+    background: url(../images/hero/aeroland-slider-branding-slide-01-bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.branding-hero-rv-inner {
+    margin-left: -300px;
+    @media #{$large-mobile , $tablet-device } {
+       margin-left: 0px;
+    }
+    @media #{$desktop-device} {
+       margin-left: -100px;
+    }
+}
+.branding-hero-text-wrap {
+    & .brand-hero-title {
+        color: #333;
+    }
+    & .sub-heading {
+        font-size: 18px;
+        max-width: 490px;
+        line-height: 1.78;
+        color: #696969;
+    }
+}

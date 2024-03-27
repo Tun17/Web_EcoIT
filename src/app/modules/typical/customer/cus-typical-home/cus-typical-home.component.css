@@ -1,0 +1,11 @@
+.chuyenmuc{
+  text-transform: uppercase;
+  color: #50B848;
+}
+.hrtag{
+  background: #50B848;
+  border: 0;
+  outline: 0;
+  height: 2px;
+  width: 200px;
+}

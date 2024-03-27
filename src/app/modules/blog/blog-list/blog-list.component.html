@@ -1,0 +1,100 @@
+<app-nav-list></app-nav-list>
+
+<!-- breadcrumb-area start -->
+<div class="breadcrumb-box">
+  <img src="assets/images/banners/banner-tuyen-dung-2.jpg" class="img-fluid">
+</div>
+<!-- breadcrumb-area end -->
+
+<!--========== News List ==========-->
+<div class="site-wrapper-reveal">
+  <!--====================  Blog Area Start ====================-->
+  <div class="blog-pages-wrapper section-space--ptb_60">
+    <div class="container">
+      <div class="py-4 mb-4">
+        <div class="align-items-center">
+          <div class="text-center">
+            <h3 class="chuyenmuc" style="color: #50B848;">Blog</h3>
+            <hr class="hrtag">
+          </div>
+        </div>
+      </div>
+
+      <div class="single-blog-item blog-grid section-space--mb_60">
+        <div class="row wdc-blog">
+          <div class="col-md-6">
+            <div id="sliderNoiBat" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div *ngIf="firstItem.image" class="carousel-item active" id="first">
+                  <img src="{{firstItem.image}}" alt="">
+                </div>
+
+                <ng-container *ngFor="let blog of blogs; let i = index">
+                  <div *ngIf="i > 0 && i < 3" class="carousel-item" id="{{blog.id}}">
+                    <img src="{{blog.thumb.pathUrl}}" alt="">
+                  </div>
+                </ng-container>
+              </div>
+
+              <a class="carousel-control-prev" href="#sliderNoiBat" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#sliderNoiBat" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div id="capfirst" style="display:block;">
+              <div class="carousel-cation">
+                <h5><a routerLink="/blog/{{firstItem.url}}">{{firstItem.title}}</a></h5>
+                <div class="mt-3">{{firstItem.description}}</div>
+              </div>
+            </div>
+            <ng-container *ngFor="let blog1 of blogs; let i = index">
+              <div *ngIf="i > 0 && i < 3" id="cap{{blog1.id}}" style="display:none;">
+                <div class="carousel-cation">
+                  <h5><a routerLink="/blog/{{blog1.link}}">{{blog1.title}}</a></h5>
+                  <div class="mt-3">{{blog1.description}}</div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div *ngFor="let blog of blogs" class="col-lg-4 col-md-6 mb-30 wow move-up">
+          <!--======= Single Blog Item Start ========-->
+          <div class="single-blog-item blog-grid">
+            <!-- Post Feature Start -->
+            <div class="post-feature blog-thumbnail">
+              <a routerLink="/blog/{{blog.link}}" routerLinkActive="active">
+                <img class="img-fluid" src="{{blog.thumb.pathUrl}}" alt="Blog Images" appHideMissing>
+              </a>
+            </div>
+            <!-- Post Feature End -->
+
+            <!-- Post info Start -->
+            <div class="post-info lg-blog-post-info">
+              <h5 class="font-weight--bold mb-2" style="font-size: 20px">
+                <a routerLink="/blog/{{blog.link}}" routerLinkActive="active">{{blog.title}}</a>
+              </h5>
+              <div class="text-desc">
+                {{blog.description}}
+              </div>
+            </div>
+            <!-- Post info End -->
+          </div>
+          <!--===== Single Blog Item End =========-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--====================  Blog Area End  ====================-->
+</div>
+<!--======== End News List ========-->
+
+<app-footer></app-footer>

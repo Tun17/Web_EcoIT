@@ -1,0 +1,17 @@
+.wdc-input{
+  width: 100%;
+  /*height: 95%;*/
+}
+.wdc-input img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.close{
+  position: absolute;
+  cursor: pointer;
+  top: 25px;
+  right: 20px;
+  color: #f00;
+}

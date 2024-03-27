@@ -1,0 +1,175 @@
+<!--====================  header area ====================-->
+<div class="header-area header-skin-transparent" id="header">
+  <div id="header-wrapper" class="header-stick">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header position-relative">
+            <!-- brand logo -->
+            <div class="header__logo p-0">
+              <a href="/trang-chu">
+                <img
+                  src="assets/images/avatars/logoEcoit.jpg"
+                  class="img-fluid"
+                  alt="Saas"
+                />
+              </a>
+            </div>
+            <!-- navigation mobile menu -->
+            <div class="d-xl-none">
+              <a id="toggle-mobile-menu" class="toggle-menu d-block"
+                ><span></span
+              ></a>
+            </div>
+            <div id="mobile-container" class="mt-20">
+              <ul id="mobile-menu" class="mobile-menu">
+                <li class="menu-item">
+                  <a title="Trang chủ" href="/" class="nav-link">TRANG CHỦ</a>
+                </li>
+                <li class="menu-item">
+                  <a title="Trang chủ" href="/" class="nav-link">SẢN PHẨM</a>
+                </li>
+                <li class="menu-item">
+                  <a title="Trang chủ" href="/" class="nav-link">GIỚI THIỆU</a>
+                </li>
+                <li class="menu-item">
+                  <a title="Trang chủ" href="/" class="nav-link">TIN TỨC</a>
+                </li>
+                <li class="menu-item">
+                  <a title="Trang chủ" href="/" class="nav-link">TUYỂN DỤNG</a>
+                </li>
+                <li class="menu-item">
+                  <a title="Trang chủ" href="/" class="nav-link">BLOG</a>
+                </li>
+                <li
+                  *ngFor="let nav of navParent"
+                  class="menu-item has-children dropdown"
+                >
+                  <a
+                    routerLink="{{ nav.url }}"
+                    title="{{ nav.name }}"
+                    data-toggle="dropdown"
+                    class="dropdown-toggle nav-link"
+                    >{{ nav.name }}</a
+                  >
+                  <ul *ngIf="nav.navChild.length > 0" class="dropdown-menu">
+                    <li *ngFor="let nav1 of nav.navChild" class="menu-item">
+                      <a
+                        routerLink="{{ nav1.url }}"
+                        title="{{ nav1.name }}"
+                        class="dropdown-item"
+                        >{{ nav1.name }}</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- navigation menu -->
+            <div class="header__navigation d-none d-xl-block">
+              <div class="header__navigation--four">
+                <div class="header-right">
+                  <div class="header-top">
+                    <div class="header-left-info">
+                      <span class="header-label">
+                        <i class="fas fa-phone"></i>
+                      </span>
+                      <span class="d-flex flex-column">
+                        <small>HOTLINE</small>
+                        <strong>
+                          <span class="color-gre"
+                            ><a href="tel:{{ about.phone }}">{{
+                              about.phone
+                            }}</a></span
+                          >
+                        </strong>
+                      </span>
+                    </div>
+                    <div class="header-left-info">
+                      <span class="header-label">
+                        <i class="far fa-envelope"></i>
+                      </span>
+                      <span class="d-flex flex-column">
+                        <small>EMAIL</small>
+                        <strong>
+                          <span class="color-gre"
+                            ><a href="mailto:{{ about.email }}">{{
+                              about.email
+                            }}</a></span
+                          >
+                        </strong>
+                      </span>
+                    </div>
+                    <div class="header-right-info">
+                      <a class="btn header-button" href="/lien-he">
+                        <span>LIÊN HỆ TƯ VẤN</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="header-bottom">
+                    <nav class="navigation-menu">
+                      <ul class="menu-primary text-uppercase">
+                        <li class="menu-item"><a href="/">TRANG CHỦ</a></li>
+                        <li class="menu-item">
+                          <a title="Trang chủ" href="/" class="nav-link"
+                            >SẢN PHẨM</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a title="Trang chủ" href="/" class="nav-link"
+                            >GIỚI THIỆU</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a title="Trang chủ" href="/" class="nav-link"
+                            >TIN TỨC</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a title="Trang chủ" href="/" class="nav-link"
+                            >TUYỂN DỤNG</a
+                          >
+                        </li>
+                        <li class="menu-item">
+                          <a title="Trang chủ" href="/" class="nav-link"
+                            >BLOG</a
+                          >
+                        </li>
+                        <li
+                          *ngFor="let nav of navParent"
+                          class="has-children has-children--multilevel-submenu"
+                          id="child-li"
+                        >
+                          <a
+                            routerLink="{{ nav.url }}"
+                            routerLinkActive="active"
+                            >{{ nav.name }}</a
+                          >
+                          <ul
+                            *ngIf="nav.navChild.length > 0"
+                            class="submenu p-2"
+                          >
+                            <li *ngFor="let nav1 of nav.navChild">
+                              <a
+                                routerLink="{{ nav1.url }}"
+                                routerLinkActive="active"
+                                class="px-3 py-2"
+                                >{{ nav1.name }}</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--====================  End of header area  ====================-->

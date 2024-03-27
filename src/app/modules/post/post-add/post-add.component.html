@@ -1,0 +1,42 @@
+<form (ngSubmit)="onSubmit()" enctype="multipart/form-data" novalidate>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="update_box">
+          <span><strong>Ảnh bìa</strong></span>
+          <div class="image">
+            <img src="{{url}}" alt="" appHideMissing>
+          </div>
+          <input type="file" value="select" (change)="thumbnailChange($event)">
+        </div>
+
+        <div class="update_box">
+          <span><strong>Mô tả</strong></span>
+          <input type="text" [(ngModel)]="news.description" name="description">
+        </div>
+
+        <div class="update_box">
+          <span><strong>Thẻ</strong></span>
+          <select>
+            <option>--Loại--</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn bg-success">Lưu</button>
+        <a routerLink="/admin/post" routerLinkActive="active" class="btn mx-3" style="background: #d6d8d9">Hủy</a>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="update_box">
+          <span><strong>Tiêu đề</strong></span>
+          <input type="text" name="title" [(ngModel)]="news.title">
+        </div>
+
+        <div class="update_box" id="sample">
+          <span><strong>Nội dung</strong></span>
+          <ckeditor [(ngModel)]="news.content" [ngModelOptions]="{standalone: true}" [config]="ckeConfig" [data]="news.content"></ckeditor>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
