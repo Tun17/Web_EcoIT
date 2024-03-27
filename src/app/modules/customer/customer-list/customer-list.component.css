@@ -55,7 +55,7 @@
   font-size: 48px;
   line-height: 100px;
   text-align: center;
-  /* background-color: #009cff; */
+  background-color: #50b848;
   color: #fff;
   border-radius: 50%;
   -webkit-transition: background-color 0.3s ease 0s;
@@ -63,7 +63,7 @@
   transition: background-color 0.3s ease 0s;
 }
 .wdc-iconbox:hover .box-icon {
-  background-color: #50b848 !important;
+  background-color: #343a40 !important;
 }
 
 .product-thumbnail-box {

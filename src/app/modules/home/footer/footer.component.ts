@@ -14,14 +14,14 @@ export class FooterComponent implements OnInit {
   post: Post[] = [];
   about: About = new About();
 
-  fullAddress: any = [
-    {
-      name: 'Trụ sở chính: Tầng 3, Khu A-B Khu văn phòng, Imperia Garden, 203 Nguyễn Huy Tưởng, Thanh Xuân, TP Hà Nội',
-    },
-    { name: 'VP2: A10 – Ngõ 217 Đê La Thành – Đống Đa - Hà Nội' },
-    {
-      name: 'Chi nhánh Đà Nẵng: Tầng 4, tòa nhà Minh sơn, số 25 đường 2/9, P. Hòa Cường Nam, Q. Hải Châu, Tp. Đà Nẵng',
-    },
+  fullAddress: String[] = [
+    // {
+    //   name: 'Trụ sở chính: Tầng 3, Khu A-B Khu văn phòng, Imperia Garden, 203 Nguyễn Huy Tưởng, Thanh Xuân, TP Hà Nội',
+    // },
+    // { name: 'VP2: A10 – Ngõ 217 Đê La Thành – Đống Đa - Hà Nội' },
+    // {
+    //   name: 'Chi nhánh Đà Nẵng: Tầng 4, tòa nhà Minh sơn, số 25 đường 2/9, P. Hòa Cường Nam, Q. Hải Châu, Tp. Đà Nẵng',
+    // },
   ];
 
   constructor(
